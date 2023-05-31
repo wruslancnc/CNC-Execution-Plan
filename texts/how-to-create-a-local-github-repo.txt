@@ -94,8 +94,168 @@ wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ tree ../
 2 directories, 2 files
 wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
 
-PUSH THE ENTIRE execute-plan FOLDER TO GITHUB.COM
+ADD ALL FILES IN THE ENTIRE execute-plan FOLDER TO LOCAL REPO (ORIGIN)
 ===========================================================
+
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git add .
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git commit -m 'initial commit'
+[master (root-commit) 86e0cc8] initial commit
+ 2 files changed, 103 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 texts/how-to-create-a-local-github-repo.txt
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
+
+
+PUSH THE ENTIRE execute-plan FOLDER TO GITHUB.COM (MASTER)
+===========================================================
+
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git push -u origin master
+Username for 'https://github.com': wruslancnc
+Password for 'https://wruslancnc@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/wruslancnc/execution-plan.git/'
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
+
+==========================================================
+https://cli.github.com/manual/
+
+GitHub CLI manual
+
+GitHub CLI, or gh, is a command-line interface to GitHub for use in your terminal or your scripts.
+
+    Available commands
+
+    Usage examples
+
+    Community extensions
+
+Installation
+
+You can find installation instructions on our README.
+Configuration
+
+    Run gh auth login to authenticate with your GitHub account. Alternatively, gh will respect the GITHUB_TOKEN environment variable.
+
+    To set your preferred editor, use gh config set editor <editor>. Read more about gh config and environment variables.
+
+    Declare your aliases for often-used commands with gh alias set.
+
+===========================================================
+
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ sudo apt install gh
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+gh is already the newest version (1.8.1).
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
+
+ 
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ which gh
+/usr/bin/gh
+
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ gh --version
+gh version 1.8.1 (2021-04-02)
+https://github.com/cli/cli/releases/tag/v1.8.1
+
+
+A new release of gh is available: 1.8.1 → v2.30.0
+https://github.com/cli/cli/releases/tag/v2.30.0
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ gh --help
+Work seamlessly with GitHub from the command line.
+
+USAGE
+  gh <command> <subcommand> [flags]
+
+CORE COMMANDS
+  gist:       Manage gists
+  issue:      Manage issues
+  pr:         Manage pull requests
+  release:    Manage GitHub releases
+  repo:       Create, clone, fork, and view repositories
+
+ADDITIONAL COMMANDS
+  alias:      Create command shortcuts
+  api:        Make an authenticated GitHub API request
+  auth:       Login, logout, and refresh your authentication
+  completion: Generate shell completion scripts
+  config:     Manage configuration for gh
+  help:       Help about any command
+  secret:     Manage GitHub secrets
+  ssh-key:    Manage SSH keys
+
+FLAGS
+  --help      Show help for command
+  --version   Show gh version
+
+EXAMPLES
+  $ gh issue create
+  $ gh repo clone cli/cli
+  $ gh pr checkout 321
+
+ENVIRONMENT VARIABLES
+  See 'gh help environment' for the list of supported environment variables.
+
+LEARN MORE
+  Use 'gh <command> <subcommand> --help' for more information about a command.
+  Read the manual at https://cli.github.com/manual
+
+FEEDBACK
+  Open an issue using 'gh issue create -R github.com/cli/cli'
+
+
+
+A new release of gh is available: 1.8.1 → v2.30.0
+https://github.com/cli/cli/releases/tag/v2.30.0
+
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
+
+
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ cd ..
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ 
+
+AUTHORIZATION FOR LOGIN
+
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ gh auth login
+? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: 3F49-4A1C
+- Press Enter to open github.com in your browser... 
+
+<ENTER>
+
+See screenshots A01, A02 and A03.
+
+✓ Authentication complete. Press Enter to continue...
+
+<ENTER>
+
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as wruslancnc
+
+
+A new release of gh is available: 1.8.1 → v2.30.0
+https://github.com/cli/cli/releases/tag/v2.30.0
+
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ 
+
+===========================================================
+
+
+
+
+
+===========================================================
+
 
 
 
