@@ -1,0 +1,23 @@
+Sent all files to gmail.
+
+wruslandr wyusoff <wruslandr@gmail.com>
+to:	wruslandr wyusoff <wruslandr@gmail.com>,
+wruslanump <wruslan.ump@gmail.com>,
+Fadhlur Rahman Bin Mohd Romlay <fadhlur@ump.edu.my>
+date:	May 31, 2023, 10:53 AM
+subject:	WRY-UMP-PhD - CNC Execution Plans (Option-01 and Option-02)
+mailed-by:	gmail.com
+
+===============================================================
+Option-01
+Linux Debian 10 RTOS Axis drives pulses on Parallel port
+Windows 10 non-RTOS receives pulses (counts) on Advantech PCIE-1884
+
+Option-02
+Linux Debian 10 RTOS Axis drives pulses on Parallel port
+Linux Ubuntu 20.04 non-RTOS receives pulses (counts) on Advantech PCIE-1884
+
+REASON:
+Advantech PCIE-1884 card cannot be installed on RTOS systems.
+
+

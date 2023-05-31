@@ -1,0 +1,87 @@
+FILE: CNC-Hardware-Software-Planning.txt
+
+(base) wruslan@HPLaptop-01-debian10:~$ date
+Tue 30 May 2023 12:04:25 PM +08
+Linux HPLaptop-01-debian10 4.19.0-24-rt-amd64 
+#1 SMP PREEMPT RT Debian 4.19.282-1 (2023-04-29) x86_64 GNU/Linux
+
+=======================================
+HPBlackDesktop (RUN WINDOWS)
+=======================================
+Windows 10
+- Run Advantech - PCIE-1884 Counters (WINDOWS) <<<=== EXECUTE
+- Run Panaterm  - Serial COM port              <<<=== EXECUTE
+- Run Mach3     - Parallel port
+- Compile GCode - GNAT Studio (Windows)
+- Run Bitscope - USB (Windows)                 <<<=== EXECUTE
+
+Debian 10 RTOS
+- Run LinuxCNC Axis - Parallel port (RTOS)
+- Run CNC jogging - Parallel port
+- Compile GCode - GNAT Studio (Linux)
+- Run Bitscope - USB (Linux) 
+
+Ubuntu 20.04 
+- Run Advantech - PCIE-1884 Counters (LINUX)
+- Run CNC jogging - Parallel port
+- Compile GCode - GNAT Studio (Linux)
+- Run Bitscope  - USB (Linux)
+
+=======================================
+GIGABlueDesktop (RUN LINUX RTOS)
+=======================================
+Windows 10
+- Run Panaterm  - Serial COM port
+- Run Mach3     - Parallel port
+- Compile GCode - GNAT Studio (Windows)
+- Run Bitscope - USB (Windows)
+
+Debian 10 RTOS
+- Run LinuxCNC Axis - Parallel port (RTOS)  <<<=== EXECUTE
+- Run CNC jogging - Parallel port           <<<=== EXECUTE
+- Compile GCode - GNAT Studio (Linux)       <<<=== EXECUTE 
+- Run Bitscope - USB (Linux)                <<<=== EXECUTE
+
+Ubuntu 20.04 
+- Run Advantech - PCIE-1884 Counters (LINUX)
+- Run CNC jogging - Parallel port
+- Compile GCode - GNAT Studio (Linux)
+- Run Bitscope  - USB (Linux)
+
+=======================================
+HPLaptop-01 and HPLaptop-02 (RUN WINDOWS)
+=======================================
+Windows 10
+- Run Panaterm  - Serial COM port           <<<=== EXECUTE
+- Run Mach3     - Parallel port
+- Compile GCode - GNAT Studio (Windows)
+- Run Bitscope - USB (Windows)              <<<=== EXECUTE
+
+Debian 10 RTOS
+- Run LinuxCNC Axis - Parallel port (RTOS)  
+- Run CNC jogging - Parallel port           
+- Compile GCode - GNAT Studio (Linux)      
+- Run Bitscope - USB (Linux)                
+
+Ubuntu 20.04 
+- Run CNC jogging - Parallel port           
+- Compile GCode - GNAT Studio (Linux)       
+- Run Bitscope  - USB (Linux)               
+
+=======================================
+NOTE 1 - SAME SOFTWARE INSTALLED ON ALL 4 COMPUTERS 
+USING HARD DISK CLONING METHOD
+
+Windows 10 - 500 GB SSD /dev/sdb1
+Debian 10  - 500 GB SSD /dev/sda1
+Ubuntu 20  - 500 GB SSD /dev/sda3
+
+=======================================
+NOTE 2 - DIFFERENT HARDWARE ON THE 4 COMPUTERS
+
+HPBlackDesktop  - PCIE-1884, Parport, Serial Port, USB
+GIGABlueDesktop - Parport, Serial Port, USB 
+HPLaptop-01     - Parport, Serial Port, USB
+HPLaptop-02     - Parport, Serial Port, USB
+
+=======================================

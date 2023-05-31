@@ -342,5 +342,9 @@ wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ tree -L 2 ./
 ===========================================================
 ALHAMDULILLAH 3 TIMES.
 ===========================================================
+After login to github.com/wruslancnc/execution-plan, then
+change the defaut branch from 'main' to 'master' to be displayed directly on website.
+
+
 
 
