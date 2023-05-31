@@ -1,0 +1,78 @@
+// FILE: FIX_AI_AsynchronousOneBufferedAI-errors.txt
+// DATE: Fri 05 May 2023 04:26:03 PM +08
+// USING QT5 in QtCreator
+
+ANALOG INPUT Asynchronous One Buffered FOR PCIE-1884 ADVANTECH CARD
+
+=====================================================================
+// ERROR NO 01
+// INSIDE configuredialog.h  LINE 5
+// #include "../../../inc/bdaqctrl.h"
+#include <bdaqctrl.h>
+
+// ERROR NO 02
+// INSIDE asynchronousonebufferedai.h  LINE 15 CONSTRUCTOR
+    // AI_AsynchronousOneBufferedAi(QWidget *parent = 0, Qt::WindowFlags flags = 0);
+       AI_AsynchronousOneBufferedAi(QWidget *parent = 0, Qt::WindowFlags flags = Qt::WindowFlags());
+
+// ERROR NO 03
+// INSIDE configuredialog.cpp  LINE 83
+   str.asprintf("Error:the error code is 0x%x\n\
+						The %s is busy or not exit in computer now.\n\
+                        Select other device please!", errorCode, des.toUtf8().data());
+
+// ERROR NO 03.5
+// INSIDE asynchronousonebufferedai.h  LINE 181
+//		item->setBackgroundColor(SimpleGraph::lineColor[i]);
+		item->setBackground(SimpleGraph::lineColor[i]);		
+		                   
+// ERROR NO 04
+// INSIDE asynchronousonewaveformao.cpp  LINE 10
+#include <QButtonGroup>
+
+
+
+
+// ERROR NO 05
+// INSIDE staticdo.cpp  LINE 77
+   //	m_portPanel[i] = new DioPortUI(0, 0, i, (quint8)0, images);
+        m_portPanel[i] = new DioPortUI(0, Qt::WindowFlags(), i, (quint8)0, images);
+
+// ERROR NO 06
+// INSIDE configuredialog.cpp  LINE 76
+        str.asprintf("Error:the error code is 0x%x\nThe %s is busy or not exit in computer now.\nSelect other device please!", errorCode, des.toUtf8().data());
+        QMessageBox::information(this, "Warning Information", str);
+
+     // str.sprintf("Error:the error code is 0x%x\nThe %s is busy or not exit in computer now.\nSelect other device please!", errorCode, des.toUtf8().data());
+     // QMessageBox::information(this, "Warning Information", str);
+
+// ERROR NO 07
+// INSIDE DioPortUI.h LINE 13
+ // DioPortUI(QWidget *parent = 0, Qt::WindowFlags flags = 0, int index = 0, quint8 state = 0, QString* images = 0);
+    DioPortUI(QWidget *parent = 0, Qt::WindowFlags flags = Qt::WindowFlags(), int index = 0, quint8 state = 0, QString* images = 0);
+
+=====================================================================
+SUCCESS COMPILATION INSIDE QtCreator 
+
+14:05:58: Running steps for project AI_AsynchronousOneBufferedAi...
+14:05:58: Configuration unchanged, skipping qmake step.
+14:05:58: Starting: "/usr/bin/make" -j8
+/usr/bin/make -f Makefile.Debug
+make[1]: Entering directory '/home/wruslan/WRY-pcie1884-qt5/Qt/build-AI_AsynchronousOneBufferedAi-Desktop-Debug'
+make[1]: Nothing to be done for 'first'.
+make[1]: Leaving directory '/home/wruslan/WRY-pcie1884-qt5/Qt/build-AI_AsynchronousOneBufferedAi-Desktop-Debug'
+14:05:58: The process "/usr/bin/make" exited normally.
+14:05:58: Elapsed time: 00:00.
+
+APPLICATION OUTPUT
+
+14:03:26: Starting /home/wruslan/WRY-pcie1884-qt5/Qt/AI_AsynchronousOneBufferedAI/../bin/debug/AI_AsynchronousOneBufferedAI...
+14:03:55: /home/wruslan/WRY-pcie1884-qt5/Qt/AI_AsynchronousOneBufferedAI/../bin/debug/AI_AsynchronousOneBufferedAI crashed.
+
+14:05:58: Starting /home/wruslan/WRY-pcie1884-qt5/Qt/AI_AsynchronousOneBufferedAI/../bin/debug/AI_AsynchronousOneBufferedAI...
+14:06:46: /home/wruslan/WRY-pcie1884-qt5/Qt/AI_AsynchronousOneBufferedAI/../bin/debug/AI_AsynchronousOneBufferedAI exited with code 0
+
+
+=====================================================================
+ALHAMDULILLAH 3 TIMES.
+=====================================================================

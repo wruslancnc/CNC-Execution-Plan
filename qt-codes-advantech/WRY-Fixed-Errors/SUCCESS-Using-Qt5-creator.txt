@@ -1,0 +1,41 @@
+
+USING QT5 
+
+wruslan@HPElBk8570w-rtwork1:~$ qtcreator
+qt5ct: using qt5ct plugin
+
+(qtcreator:38271): Gtk-WARNING **: 13:11:12.787: GTK+ module libcanberra-gtk-module.so cannot be loaded.
+GTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.
+Gtk-Message: 13:11:12.787: Failed to load module "canberra-gtk-module"
+qt5ct: D-Bus global menu: no
+QVariant::load: unknown user type with name Utils::PerspectiveState.
+"Previously SDK provided CMakeTool \"/opt/Qt/Tools/CMake/bin/cmake\" (qt.tools.cmake) dropped."
+wruslan@HPElBk8570w-rtwork1:~$ 
+
+
+EXECUTION AFTER COMPI:LATON ===> SUCCESS
+
+wruslan@HPElBk8570w-rtwork1:~/WRY-pcie1884-qt5/Qt/bin$ cd debug/
+wruslan@HPElBk8570w-rtwork1:~/WRY-pcie1884-qt5/Qt/bin/debug$ ls -l
+total 58596
+-rwxrwxr-x 1 wruslan wruslan 3356008 May  5 00:34 Counter_DelayedPulseGeneration
+-rwxrwxr-x 1 wruslan wruslan 3214720 May  5 00:00 Counter_EventCounter
+-rwxrwxr-x 1 wruslan wruslan 4198368 May  4 23:42 Counter_FrequencyMeasurement
+-rwxrwxr-x 1 wruslan wruslan 4302640 May  4 23:09 Counter_PulseOutputwithTimerInterrupt
+-rwxrwxr-x 1 wruslan wruslan 4178672 May  4 22:52 Counter_PulseWidthMeasurement
+-rwxrwxr-x 1 wruslan wruslan 4288264 May  4 22:35 Counter_PWMOutput
+-rwxrwxr-x 1 wruslan wruslan 4254448 May  4 21:17 Counter_SnapCounter
+-rwxrwxr-x 1 wruslan wruslan 3262424 May  4 20:40 Counter_UpDownCounter
+-rwxrwxr-x 1 wruslan wruslan 6484240 May  4 20:10 DI_DIInterrupt
+-rwxrwxr-x 1 wruslan wruslan 5519936 May  4 19:48 DI_DIPatternMatchInterrupt
+-rwxrwxr-x 1 wruslan wruslan 5231472 May  4 18:25 DI_DIStatusChangeInterrupt
+-rwxrwxr-x 1 wruslan wruslan 5848632 May  4 15:44 DI_StaticDI
+-rwxrwxr-x 1 wruslan wruslan 5838848 May  4 16:48 DO_StaticDO
+wruslan@HPElBk8570w-rtwork1:~/WRY-pcie1884-qt5/Qt/bin/debug$ ./DO_StaticDO 
+wruslan@HPElBk8570w-rtwork1:~/WRY-pcie1884-qt5/Qt/bin/debug$ ./DI_StaticDI 
+wruslan@HPElBk8570w-rtwork1:~/WRY-pcie1884-qt5/Qt/bin/debug$ ./DI_DIInterrupt 
+Segmentation fault (core dumped)
+wruslan@HPElBk8570w-rtwork1:~/WRY-pcie1884-qt5/Qt/bin/debug$ ./Counter_PulseWidthMeasurement 
+wruslan@HPElBk8570w-rtwork1:~/WRY-pcie1884-qt5/Qt/bin/debug$ ./Counter_FrequencyMeasurement 
+wruslan@HPElBk8570w-rtwork1:~/WRY-pcie1884-qt5/Qt/bin/debug$ 
+

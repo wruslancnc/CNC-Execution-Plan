@@ -1,0 +1,90 @@
+// FILE: Fix_Counter_PWMOutput-errors.txt
+// DATE: Thu 04 May 2023 04:26:03 PM +08
+// USING QT5 in QtCreator
+
+COUNTER_PULSEWIDTHMEASUREMENT FOR PCIE-1884 ADVANTECH CARD
+
+=====================================================================
+// ERROR NO 01
+// INSIDE configuredialog.h  LINE 5
+#include <bdaqctrl.h>
+// #include "../../../inc/bdaqctrl.h"
+
+// ERROR NO 02
+// INSIDE pulsewidthmwasurement.h LINE 15
+//	UpDownCounter(QWidget *parent = 0, Qt::WindowFlags flags = 0);
+    UpDownCounter(QWidget *parent = 0, Qt::WindowFlags flags = Qt::WindowFlags());
+
+// ERROR NO 03
+// INSIDE configuredialog.cpp LINE 75
+ str.asprintf("Error:the error code is 0x%x\n\
+                   The %s is busy or not exit in computer now.\n\
+                   Select other device please!", errorCode, des.toUtf8().data());
+
+// ERROR NO 04
+/home/wruslan/WRY-pcie1884-qt5/Qt/DI_DIInterrupt/configuredialog.cpp:140: error: invalid conversion from ‘int’ to ‘Qt::WindowType’ [-fpermissive]
+../DI_DIInterrupt/configuredialog.cpp: In member function ‘void ConfigureDialog::DeviceChanged(int)’:
+../DI_DIInterrupt/configuredialog.cpp:140:43: error: invalid conversion from ‘int’ to ‘Qt::WindowType’ [-fpermissive]
+  140 |         m_portPanel[i] = new DioPortUI(0, 0, portIndexes[i], ports[portIndexes[i]], images);
+      |                                           ^
+      |                                           |
+      |                                           int
+// SOLUTION FOR ERROR NO 04
+// ERROR NO 4
+     // m_portPanel[i] = new DioPortUI(0, 0, portIndexes[i], ports[portIndexes[i]], images);
+        m_portPanel[i] = new DioPortUI(0, Qt::WindowFlags(), portIndexes[i], ports[portIndexes[i]], images);
+
+
+// ERROR NO 05 // SOLUTION
+// INSIDE updowncounter.cpp JUST ADD HEADER BELOW
+
+#include <QButtonGroup>
+
+// ERROR 06
+// INSIDE simplegraph.h LINE 12
+
+#include <bdaqctrl.h>
+// #include "../../../inc/bdaqctrl.h"
+
+// ERROR 07
+// INSIDE simplegraph.cpp LINES 328, 348, 367
+// REPLACE sprintf WITH asprintf 
+
+
+	rangeStrs[0].asprintf("%g", rangeMax);
+	rangeStrs[0] += spted_unit[tm_unit_idx];
+	rangeStrs[1].asprintf("%g", rangeMin);
+	rangeStrs[1] += spted_unit[tm_unit_idx];
+
+
+REFERENCES:   
+===================================================   
+https://doc.qt.io/qt-6/qvboxlayout.html      
+https://doc.qt.io/qt-5/qbuttongroup.html
+https://doc.qt.io/qt-6/qbuttongroup.html#details
+
+=====================================================================
+SUCCESS COMPILATION
+
+22:53:29: Running steps for project Counter_PulseWidthMeasurement...
+22:53:29: Configuration unchanged, skipping qmake step.
+22:53:29: Starting: "/usr/bin/make" -j8
+/usr/bin/make -f Makefile.Debug
+make[1]: Entering directory '/home/wruslan/WRY-pcie1884-qt5/Qt/build-Counter_PulseWidthMeasurement-Desktop-Debug'
+make[1]: Nothing to be done for 'first'.
+make[1]: Leaving directory '/home/wruslan/WRY-pcie1884-qt5/Qt/build-Counter_PulseWidthMeasurement-Desktop-Debug'
+22:53:29: The process "/usr/bin/make" exited normally.
+22:53:29: Elapsed time: 00:00.
+
+
+EXECUTION ON THE NOTEBOOK (NO DEVICE HAHAHA)
+
+22:52:26: Starting /home/wruslan/WRY-pcie1884-qt5/Qt/Counter_PulseWidthMeasurement/../bin/debug/Counter_PulseWidthMeasurement...
+22:53:01: /home/wruslan/WRY-pcie1884-qt5/Qt/Counter_PulseWidthMeasurement/../bin/debug/Counter_PulseWidthMeasurement exited with code 0
+
+22:53:29: Starting /home/wruslan/WRY-pcie1884-qt5/Qt/Counter_PulseWidthMeasurement/../bin/debug/Counter_PulseWidthMeasurement...
+22:54:00: /home/wruslan/WRY-pcie1884-qt5/Qt/Counter_PulseWidthMeasurement/../bin/debug/Counter_PulseWidthMeasurement exited with code 0
+
+=====================================================================
+ALHAMDULILLAH 3 TIMES.
+=====================================================================

@@ -17,6 +17,18 @@ Codename:	focal
 wruslan@HPLaptop-01-ub20:~$ 
 
 ===========================================================
+COMMAND SUMMARY (ONLY 3 INSTRUCTIONS)
+===========================================================
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git add .
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git commit -m 'add folder diagrams, default = master branch'
+....
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git push -u origin master
+.... 
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
+
+===========================================================
+
+===========================================================
 wruslan@HPLaptop-01-ub20:~$ which git
 /usr/bin/git
 wruslan@HPLaptop-01-ub20:~$ git --version
@@ -346,5 +358,47 @@ After login to github.com/wruslancnc/execution-plan, then
 change the defaut branch from 'main' to 'master' to be displayed directly on website.
 
 
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git add .
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git commit -m 'add folder diagrams, default = master branch'
+[master 7125cf8] add folder diagrams, default = master branch
+ 24 files changed, 114 insertions(+)
+ create mode 100755 diagrams/CNC-Connection-Diagram.jpeg
+ create mode 100755 diagrams/CNC-Hardware-Software-planning.txt
+ create mode 100755 diagrams/DONE-04-Report.txt
+ create mode 100755 diagrams/Option-01-Planned-Execution-Screenshot.png
+ create mode 100755 diagrams/Option-01-Planned-Execution.dia
+ create mode 100755 diagrams/Option-02-Planned-Execution-Screenshot.png
+ create mode 100755 diagrams/Option-02-Planned-Execution.dia
+ rename {screenshots-setup => screenshots-github-setup}/01-Screenshot_2023-06-01_03-12-23.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/02-Screenshot_2023-06-01_03-13-33.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/04-Screenshot_2023-06-01_03-15-05.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/05-Screenshot_2023-06-01_03-15-49.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/06-Screenshot_2023-06-01_03-16-27.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/07-Screenshot_2023-06-01_03-17-06.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/08-Screenshot_2023-06-01_03-18-06.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/09-Screenshot_2023-06-01_03-19-24.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/10-Screenshot_2023-06-01_03-20-02.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/11-Screenshot_2023-06-01_03-24-35.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/12-Screenshot_2023-06-01_03-26-07.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/13-Screenshot_2023-06-01_03-27-53.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/A00-Screenshot_2023-06-01_05-30-24.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/A01-Screenshot_2023-06-01_05-15-41.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/A02-Screenshot_2023-06-01_05-17-53.png (100%)
+ rename {screenshots-setup => screenshots-github-setup}/A03-Screenshot_2023-06-01_05-18-40.png (100%)
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ git push -u origin master
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 341.80 KiB | 17.99 MiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/wruslancnc/execution-plan.git
+   ac7e615..7125cf8  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
+
+======================================================================
 
 
