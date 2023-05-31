@@ -1,0 +1,101 @@
+File: how-to-create-a-local-github-repo.txt
+
+wruslan@HPLaptop-01-ub20:~$ date
+Thu 01 Jun 2023 03:30:40 AM +08
+
+wruslan@HPLaptop-01-ub20:~$ uname -a
+Linux HPLaptop-01-ub20 5.15.0-73-lowlatency 
+#80~20.04.1-Ubuntu SMP PREEMPT Wed May 24 00:20:28 UTC 2023 
+x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPLaptop-01-ub20:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.6 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPLaptop-01-ub20:~$ 
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~$ which git
+/usr/bin/git
+wruslan@HPLaptop-01-ub20:~$ git --version
+git version 2.25.1
+wruslan@HPLaptop-01-ub20:~$ 
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~$ cd github
+wruslan@HPLaptop-01-ub20:~/github$ ls -al
+total 32
+drwxrwxr-x  8 wruslan wruslan 4096 Mar 31  2021 .
+drwxr-xr-x 84 wruslan wruslan 4096 Jun  1 03:30 ..
+drwxrwxr-x  3 wruslan wruslan 4096 Apr 11  2021 wruslandr
+drwxrwxr-x 14 wruslan wruslan 4096 Apr 11  2021 wruslandra
+drwxrwxr-x 30 wruslan wruslan 4096 Jun  3  2021 wruslangit
+drwxrwxr-x 11 wruslan wruslan 4096 Mar 23  2021 wruslanmit
+drwxrwxr-x 12 wruslan wruslan 4096 Jun 17  2021 wruslanmmu
+drwxrwxr-x 29 wruslan wruslan 4096 Jan  7  2022 wruslanump
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~/github$ mkdir wruslancnc
+wruslan@HPLaptop-01-ub20:~/github$ ls -l
+total 28
+drwxrwxr-x  2 wruslan wruslan 4096 Jun  1 04:21 wruslancnc
+drwxrwxr-x  3 wruslan wruslan 4096 Apr 11  2021 wruslandr
+drwxrwxr-x 14 wruslan wruslan 4096 Apr 11  2021 wruslandra
+drwxrwxr-x 30 wruslan wruslan 4096 Jun  3  2021 wruslangit
+drwxrwxr-x 11 wruslan wruslan 4096 Mar 23  2021 wruslanmit
+drwxrwxr-x 12 wruslan wruslan 4096 Jun 17  2021 wruslanmmu
+drwxrwxr-x 29 wruslan wruslan 4096 Jan  7  2022 wruslanump
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~/github$ cd wruslancnc/
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ 
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ git clone https://github.com/wruslancnc/execution-plan.git
+Cloning into 'execution-plan'...
+warning: You appear to have cloned an empty repository.
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ 
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ ls -al
+total 12
+drwxrwxr-x 3 wruslan wruslan 4096 Jun  1 04:22 .
+drwxrwxr-x 9 wruslan wruslan 4096 Jun  1 04:21 ..
+drwxrwxr-x 3 wruslan wruslan 4096 Jun  1 04:22 execution-plan
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ 
+
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ ls -al execution-plan/
+total 12
+drwxrwxr-x 3 wruslan wruslan 4096 Jun  1 04:22 .
+drwxrwxr-x 3 wruslan wruslan 4096 Jun  1 04:22 ..
+drwxrwxr-x 7 wruslan wruslan 4096 Jun  1 04:22 .git
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ 
+
+===========================================================
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc$ cd execution-plan/
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ ls -al
+total 20
+drwxrwxr-x 4 wruslan wruslan 4096 Jun  1 04:31 .
+drwxrwxr-x 3 wruslan wruslan 4096 Jun  1 04:31 ..
+drwxrwxr-x 7 wruslan wruslan 4096 Jun  1 04:22 .git
+-rw-rw-r-- 1 wruslan wruslan   29 Jun  1 04:30 README.md
+drwxrwxr-x 2 wruslan wruslan 4096 Jun  1 04:28 texts
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$
+ 
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ tree ../
+../
+└── execution-plan
+    ├── README.md
+    └── texts
+        └── how-to-create-a-local-github-repo.txt
+
+2 directories, 2 files
+wruslan@HPLaptop-01-ub20:~/github/wruslancnc/execution-plan$ 
+
+PUSH THE ENTIRE execute-plan FOLDER TO GITHUB.COM
+===========================================================
+
+
+
