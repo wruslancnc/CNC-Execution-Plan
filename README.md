@@ -11,6 +11,8 @@ Bismillah Hirrahma Nirrahim
 ![](images-run-gcodes/SNAHYP-Screenshot.png)
 ![](images-run-gcodes/SNAILSHELL-Screenshot.png)
 
+# CNC Electrical Signals Validation
+
 The ngcode for letters KSG has lines (G01) and curves.(G02 and G03). This is a quick check for electrical signals for the X and Y axes.
 ![](parport-electrical-signals/KSG-Screenshot.png)
 
