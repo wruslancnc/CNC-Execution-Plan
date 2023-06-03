@@ -1,4 +1,5 @@
-Bismillah Hirrahma Nirrahim
+# Bismillah Hirrahma Nirrahim
+
 # CNC-Execution-Plan
 
 ![](images-run-gcodes/TEARDROP-Screenshot.png)
@@ -18,6 +19,8 @@ Bismillah Hirrahma Nirrahim
 The ngcode for letters KSG has lines (G01) and curves.(G02 and G03). 
 
 The LED bank above is a quick check for electrical signals for the X, Y and Z axes.
+
+# Alhamdulillah Hirrabil Alamin
 
 Wassalam.
 WRY
