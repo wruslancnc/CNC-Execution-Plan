@@ -17,7 +17,7 @@ Bismillah Hirrahma Nirrahim
 
 The ngcode for letters KSG has lines (G01) and curves.(G02 and G03). 
 
-This is a quick check for electrical signals for the X, Y and Z axes.
+The LED bank above is a quick check for electrical signals for the X, Y and Z axes.
 
 Wassalam.
 WRY
