@@ -1,0 +1,78 @@
+
+wruslan@HPLaptop-01-ub20:~/Downloads$ date
+Tue 06 Jun 2023 05:11:32 AM +08
+
+wruslan@HPLaptop-01-ub20:~/Downloads$ uname -a
+Linux HPLaptop-01-ub20 5.15.0-73-lowlatency #80~20.04.1-Ubuntu SMP PREEMPT Wed May 24 00:20:28 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPLaptop-01-ub20:~/Downloads$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.6 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPLaptop-01-ub20:~/Downloads$ 
+
+=====================================================================
+REF: https://www.linuxcapable.com/how-to-install-github-desktop-on-ubuntu-linux/
+
+Developers and open-source enthusiasts, buckle up! It’s time to explore the world of Git and GitHub with the powerful GitHub Desktop Client for Linux. This client brings an intuitive user interface to your favorite version control system, making it easier to manage repositories, collaborate, and contribute to open-source projects. In this introduction, we’ll delve into the key features of GitHub Desktop Client for Linux and what sets it apart from other Git clients.
+
+As you can see, the GitHub Desktop Client for Linux is a powerful and feature-rich Git client that streamlines your development workflow. The next part of our guide will demonstrate how to install GitHub Desktop on Ubuntu 22.04 Jammy Jellyfish or Ubuntu 20.04 Focal Fossa using CLI commands.
+
+=====================================================================
+ 
+wruslan@HPLaptop-01-ub20:~/Downloads$ wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/shiftkey-packages.gpg > /dev/null
+[sudo] password for wruslan: 
+wruslan@HPLaptop-01-ub20:~/Downloads$ sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
+wruslan@HPLaptop-01-ub20:~/Downloads$ 
+
+wruslan@HPLaptop-01-ub20:~/Downloads$ sudo apt update
+....
+....
+=====================================================================
+wruslan@HPLaptop-01-ub20:~/Downloads$ sudo apt install github-desktop
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  gir1.2-gnomekeyring-1.0 libgnome-keyring0
+The following NEW packages will be installed:
+  github-desktop
+0 upgraded, 1 newly installed, 0 to remove and 30 not upgraded.
+Need to get 91.5 MB of archives.
+After this operation, 333 MB of additional disk space will be used.
+Get:1 https://apt.packages.shiftkey.dev/ubuntu any/main amd64 github-desktop amd64 3.2.1-linux1 [91.5 MB]
+Fetched 91.5 MB in 56s (1,640 kB/s)                                                                                                                                            
+Selecting previously unselected package github-desktop.
+(Reading database ... 1046785 files and directories currently installed.)
+Preparing to unpack .../github-desktop_3.2.1-linux1_amd64.deb ...
+Unpacking github-desktop (3.2.1-linux1) ...
+Setting up github-desktop (3.2.1-linux1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
+wruslan@HPLaptop-01-ub20:~/Downloads$ 
+
+=====================================================================
+wruslan@HPLaptop-01-ub20:~/Downloads$ sudo updatedb
+wruslan@HPLaptop-01-ub20:~/Downloads$ sudo ldconfig
+wruslan@HPLaptop-01-ub20:~/Downloads$ sudo depmod -a
+wruslan@HPLaptop-01-ub20:~/Downloads$ 
+
+=====================================================================
+How to Launch GitHub Desktop
+
+Now that you’ve successfully installed GitHub Desktop on your Ubuntu system, you can launch it differently depending on how you installed it.
+
+First, if you have your terminal open, you can launch the GitHub desktop client using the following command:
+
+EXECUTE:  github-desktop
+
+=====================================================================
+ALHAMDULILLAH 3 TIMES.
+=====================================================================
+
+
+
